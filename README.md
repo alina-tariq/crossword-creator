@@ -23,7 +23,7 @@ python3 crossword.py
 ```
 
 ## Upcoming Features
-- Adding numbers to the words in the crossword printout  
-- The ability to request accompanying clues from the user and print 
+[ ] Adding numbers to the words in the crossword printout  
+[ ] The ability to request accompanying clues from the user and print 
 
 ## Demo
