@@ -428,7 +428,7 @@ setUp = 0
 
 while (setUp != 1):
     print('Welcome to the Crossword Creator!')
-    print('Please enter the crossword board size you desire!')
+    print('Please enter the crossword board size you desire.')
     print('Number of rows: ', end="")
     rows = input()
     print('Number of columns: ', end="")
