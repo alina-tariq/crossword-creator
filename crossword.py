@@ -384,7 +384,7 @@ def readdwords(board, L):
     return recheck
 
 
-def crossword(L, maxrows, maxcols):
+def crossword(L, maxrows, maxcols, title):
     '''
     Attempts to make a crossword puzzle using the given list of words
     :param L: list of words to be added to the crossword puzzle
@@ -411,7 +411,11 @@ def crossword(L, maxrows, maxcols):
 
     # prints out words that could not added (if any) and the crossword puzzle
     if oldlen != 0:
+        print('****************')
         print('Crossword Puzzle')
+        print('****************')
+        print(' ')
+        print(title.upper())
         print(' ')
         printboard(board)
         print(' ')
@@ -419,6 +423,8 @@ def crossword(L, maxrows, maxcols):
         print(' ')
     else:
         print('Crossword Puzzle')
+        print(' ')
+        print(title.upper())
         print(' ')
         printboard(board)
         print(' ')
@@ -429,10 +435,13 @@ setUp = 0
 while (setUp != 1):
     print('Welcome to the Crossword Creator!')
     print('Please enter the crossword board size you desire.')
+    print(' ')
     print('Number of rows: ', end="")
     rows = input()
     print('Number of columns: ', end="")
     cols = input()
+    print('What is the theme of your crossword: ', end="")
+    title = input()
     print('How many words would you like to add? ', end="")
     numofw = input()
 
@@ -448,6 +457,8 @@ while (setUp != 1):
             else:
                 print('You have entered an invalid choice selection.')
 
+        print(' ')
+        print('Please enter words in all caps!')
         if int(choice) == 1:
             for nums in range(0, int(numofw)):
                 print('Please enter a word: ', end="")
@@ -463,4 +474,4 @@ while (setUp != 1):
     else:
         print('You have entered an invalid number of rows, columns, or words.')
 
-crossword(L, int(rows), int(cols))
+crossword(L, int(rows), int(cols), title)
